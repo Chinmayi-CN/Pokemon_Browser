@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pokémon Browser — Clean</title>
+
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">PB</div>
+        <div>
+          <div class="title">Pokémon Browser</div>
+          <div class="small">Clean interface • Plain JavaScript • PokéAPI</div>
+        </div>
+      </div>
+
+      <nav>
+        <div class="dropdown" id="dropdownRoot">
+          <div class="drop-btn" id="dropToggle" aria-expanded="false">
+            Menu ▾
+          </div>
+
+          <div class="drop-menu" id="dropMenu">
+            <div class="drop-item">Home <span class="small muted">🏠</span></div>
+            <div class="drop-item">Favorites <span class="small muted">★</span></div>
+            <div class="drop-item">About <span class="small muted">ℹ️</span></div>
+            <div class="drop-item">Help <span class="small muted">❓</span></div>
+          </div>
+        </div>
+
+        <div class="control">
+          <label class="small">Hide menu items</label>
+          <input type="checkbox" id="hideItemsToggle" title="Hide menu items">
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="panel">
+        <div class="list-header">
+          <div>
+            <div style="font-weight:700">Pokémon</div>
+            <div class="small">Showing 20 per page — click View Details</div>
+          </div>
+
+          <div class="pager">
+            <button class="pill" id="prevBtn" disabled>◀ Prev</button>
+            <div id="pageLabel" class="small muted">Page 1</div>
+            <button class="pill" id="nextBtn" disabled>Next ▶</button>
+          </div>
+        </div>
+
+        <div id="pokemonList" class="pokemon-grid">
+          
+        </div>
+      </section>
+
+      <aside class="panel details" id="detailsPanel">
+        <h3>Details</h3>
+        <div id="detailsInner" class="muted">Select a Pokémon to see name, id, weight and sprite.</div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
